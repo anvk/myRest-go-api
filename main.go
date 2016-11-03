@@ -18,6 +18,7 @@ func main() {
 		v1.OPTIONS("/todos/:todoid", Options) // PUT, DELETE
 	}
 
+	// curl -i http://localhost:8080/ping
 	router.GET("/ping", func(context *gin.Context) {
 		context.JSON(200, gin.H{
 			"message": "pong",

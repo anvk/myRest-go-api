@@ -1,0 +1,107 @@
+{
+	"variables": [],
+	"info": {
+		"name": "myRest-go-api",
+		"_postman_id": "a9ad1219-5078-d6df-c696-5910bd817392",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ping",
+			"request": {
+				"url": "http://localhost:8080/ping",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Todos",
+			"request": {
+				"url": "http://localhost:8080/api/v1/todos",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Todo",
+			"request": {
+				"url": "http://localhost:8080/api/v1/todos/100",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Create Todo item",
+			"request": {
+				"url": "http://localhost:8080/api/v1/todos",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"Text\": \"New Todo Item\",\n  \"Completed\": false,\n  \"Due\": \"2016-11-01T12:30:00Z\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Update Todo item",
+			"request": {
+				"url": "http://localhost:8080/api/v1/todos/100",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"Text\": \"Updated Item Text\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Todo item",
+			"request": {
+				"url": "http://localhost:8080/api/v1/todos/100",
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
